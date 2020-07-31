@@ -8,25 +8,23 @@ namespace SisLibCredito.Models
 {
     public class CreditoEntradaModel
     {
-        //[DataType(DataType.Currency)]
         [Required]
+        [Display(Name = "Valor do Crédito R$")]
         public decimal Valor { get; set; }
 
         [Display(Name = "Tipo de Crédito")]
         [Required]
-        //{ Value = "1", Text = "Credito Direto" },
-        //{ Value = "2", Text = "Credito Consignado" },
-        //{ Value = "3", Text = "Credito Pessoa Jurídica" },
-        //{ Value = "4", Text = "Credito Pessoa Física" },
-        //{ Value = "5", Text = "Credito Imobiliário"},
-        public int Tipo { get; set; }
+        public int TipoId { get; set; }
 
         [Required]
         [Range(0, int.MaxValue, ErrorMessage = "Qtd de parcelas deve ser um valor inteiro")]
+        [Display(Name = "Quantidade de Parcelas")]
         public int QtdParcelas { get; set; }
+
 
         [DataType(DataType.Date)]
         [Required]
+        [Display(Name = "Data do Primeiro Vencimento")]
         public DateTime DtPrimeiroVencimento { get; set; }
 
     }

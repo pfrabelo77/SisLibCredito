@@ -8,7 +8,7 @@ namespace SisLibCredito.DTO
     public class CreditoEntradaDTO
     {
         public decimal Valor { get; set; }
-        public int Tipo { get; set; }
+        public int TipoId { get; set; }
         public int QtdParcelas { get; set; }
         public DateTime DtPrimeiroVencimento { get; set; }
 
